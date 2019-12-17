@@ -5,6 +5,8 @@ import com.alekseev.Repos.PurchaseRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class PurchaseDaoServiceImpl implements PurchaseDaoServise {
     @Autowired
@@ -13,6 +15,10 @@ public class PurchaseDaoServiceImpl implements PurchaseDaoServise {
     public void save(Purchase p) {
         purchaseRepo.save(p);
 
+    }
 
+    @Override
+    public List<Purchase> findAll() {
+        return purchaseRepo.findAll();
     }
 }
