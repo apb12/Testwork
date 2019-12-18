@@ -2,7 +2,7 @@ package com.alekseev.Controller;
 
 import com.alekseev.Entity.Item;
 import com.alekseev.Entity.Purchase;
-import com.alekseev.Service.PurchaseDaoServise;
+import com.alekseev.Service.PurchaseDaoServiсe;
 import com.alekseev.Service.PurchaseValidationExeption;
 import com.alekseev.Service.ValidationService;
 import com.alekseev.Service.XmlToObjectService;
@@ -19,7 +19,7 @@ import java.sql.Timestamp;
 @RestController
 public class PurchaseController {
     @Autowired
-    private PurchaseDaoServise purchaseDaoServise;
+    private PurchaseDaoServiсe purchaseDaoServise;
 
     @PostMapping("/save")
     public boolean savePurchase(

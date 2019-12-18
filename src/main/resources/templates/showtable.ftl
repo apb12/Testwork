@@ -6,7 +6,7 @@
 </div>
 <#list item as it>
 <ul class="list-group">
-    <a class="badge badge-secondary mb-1"> Наименование товара :${it.name}</a>
+    <li class="badge badge-secondary mb-1"> Наименование товара :${it.name}</li>
 </#list>
 </ul>
 </#if>
@@ -16,7 +16,7 @@
 </div>
 <#list purchase as p>
 <ul class="list-group">
-    <a href="/crud/${p.id?c}" class="badge badge-secondary mb-1">Покупатель ${p.name} ${p.lastName} Дата ${p.purchaseDate}</a>
+   <li> <a href="/crud/${p.id?c}" class="badge badge-secondary mb-1">Покупатель ${p.name} ${p.lastName} Дата ${p.purchaseDate}</a></li>
 </#list>
 </ul>
 </#if>

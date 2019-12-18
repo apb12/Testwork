@@ -8,17 +8,27 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class PurchaseDaoServiceImpl implements PurchaseDaoServise {
+public class PurchaseDaoServiceImpl implements PurchaseDaoServiсe {
     @Autowired
     private PurchaseRepo purchaseRepo;
     @Override
     public void save(Purchase p) {
         purchaseRepo.save(p);
-
     }
 
     @Override
     public List<Purchase> findAll() {
         return purchaseRepo.findAll();
     }
+
+    @Override
+    public Purchase findByid(Long id) {
+        return purchaseRepo.getOne(id);
+    }
+
+    @Override
+    public void delete(Purchase p) {
+        purchaseRepo.delete(p);
+    }
+
 }

@@ -19,4 +19,12 @@ public class Item {
     public Item(Long id) {
         this.id = id;
     }
+
+    @Override
+    public String toString() {
+        return "Item{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                '}';
+    }
 }

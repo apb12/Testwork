@@ -1,7 +1,7 @@
 package com.alekseev.Controller;
 
 import com.alekseev.Service.ItemDaoService;
-import com.alekseev.Service.PurchaseDaoServise;
+import com.alekseev.Service.PurchaseDaoServiсe;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class ShowTableController {
 
     @Autowired
-    private PurchaseDaoServise purchaseDaoServise;
+    private PurchaseDaoServiсe purchaseDaoServise;
     @Autowired
     private ItemDaoService itemDaoService;
 

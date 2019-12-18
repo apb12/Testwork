@@ -6,9 +6,8 @@
 </div>
 
 <div class="list-group">
-    <a href="/show/item" class="badge badge-secondary mb-1"> Товары</a>
+    <li><a href="/show/item" class="badge badge-secondary mb-1"> Товары</a></li>
+   <li><a href="/show/purchase" class="badge badge-secondary mb-1"> Покупки </a></li>
 </div>
-<div class="list-group">
-    <a href="/show/purchase" class="badge badge-secondary mb-1"> Покупки </a>
-</div>
+
 </@c.page>

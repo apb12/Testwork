@@ -14,4 +14,10 @@ public class ItemDaoServiceImpl implements ItemDaoService {
     public List<Item> findAll() {
         return itemRepo.findAll();
     }
+
+    @Override
+    public Item findById(Long id) {
+        return itemRepo.getOne(id);
+    }
+
 }

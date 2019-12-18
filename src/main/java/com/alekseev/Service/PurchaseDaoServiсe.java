@@ -6,7 +6,9 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public interface PurchaseDaoServise {
+public interface PurchaseDaoServiсe {
     void save(Purchase p);
     List<Purchase>findAll();
+    Purchase findByid(Long id);
+    void delete(Purchase p);
 }

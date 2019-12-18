@@ -8,4 +8,5 @@ import java.util.List;
 @Service
 public interface ItemDaoService {
     List<Item>findAll();
+    Item findById(Long id);
 }
