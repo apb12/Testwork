@@ -6,9 +6,11 @@ import javax.persistence.*;
 import java.math.BigDecimal;
 import java.sql.Timestamp;
 
+/**
+ * Entity for Purchase
+ */
 @Entity
 @Data
-
 public class Purchase {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

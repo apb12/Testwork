@@ -6,6 +6,9 @@ import org.springframework.stereotype.Service;
 
 import java.io.IOException;
 
+/**
+ * Service that marshlling xml to POJO
+ */
 @Service
 public class XmlToObjectService {
     public static Purchase convert(String xml) throws IOException {

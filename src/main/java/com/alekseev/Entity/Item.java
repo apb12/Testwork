@@ -5,6 +5,9 @@ import lombok.Data;
 import javax.persistence.*;
 import java.util.List;
 
+/**
+ * Entity for item
+ */
 @Entity
 @Data
 public class Item {

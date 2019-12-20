@@ -12,6 +12,9 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
+/**
+ * Swagger config
+ */
 @Configuration
 @EnableSwagger2
 public class SwaggerConfig {

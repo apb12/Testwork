@@ -6,6 +6,9 @@ import org.springframework.stereotype.Service;
 import java.sql.Timestamp;
 import java.util.List;
 
+/**
+ * Interface for Purchase Dao
+ */
 @Service
 public interface PurchaseDaoServiсe {
     void save(Purchase p);

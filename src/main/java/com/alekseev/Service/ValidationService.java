@@ -9,6 +9,9 @@ import javax.xml.validation.SchemaFactory;
 import javax.xml.validation.Validator;
 import java.io.*;
 
+/**
+ * Service validation xml document against xsd shema
+ */
 @Service
 public class ValidationService {
     public static boolean validXml(String xml, String xsdPath) throws FileNotFoundException {

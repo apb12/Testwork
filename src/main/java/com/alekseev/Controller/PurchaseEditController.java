@@ -10,6 +10,9 @@ import org.springframework.web.bind.annotation.*;
 
 import java.math.BigDecimal;
 
+/**
+ * Controller for editig Purchase and present crud operation
+ */
 @Controller
 @RequestMapping("/crud")
 public class PurchaseEditController {
@@ -18,6 +21,12 @@ public class PurchaseEditController {
     @Autowired
     private ItemDaoService itemDaoService;
 
+    /**
+     * Method that get Purchase and show it in template and find all items from item table and show it too
+     * @param p Purchase find by id
+     * @param model mvc model
+     * @return
+     */
     @GetMapping("/{id}")
     public String editPurch(@PathVariable("id")Purchase p, Model model){
         model.addAttribute("purchase",p);
@@ -29,6 +38,18 @@ public class PurchaseEditController {
         purchaseDaoServiсe.delete(p);
         return "redirect:/greeting";
     }
+
+    /**
+     * Method find Purchase by id and updating all these params and save ii in data base
+     * @param id Purhase id
+     * @param item Item name
+     * @param name Purchase name
+     * @param lastName Purchase last name
+     * @param age Purchase age
+     * @param count Purchase count
+     * @param amount Purchase amount
+     * @return
+     */
     @PostMapping("/save")
     public  String savePurch(@RequestParam ("id")Long id,
                              @RequestParam("item")String item,

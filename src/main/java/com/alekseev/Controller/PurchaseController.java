@@ -16,11 +16,17 @@ import java.io.IOException;
 import java.math.BigDecimal;
 import java.sql.Timestamp;
 
+/**
+ * Restcontroller that generate test xml docs and getting and validate them and save to database
+ */
 @RestController
 public class PurchaseController {
     @Autowired
     private PurchaseDaoServiсe purchaseDaoServise;
 
+    /**
+     * Method for save valid xml doc to database
+     */
     @PostMapping("/save")
     public boolean savePurchase(
             @RequestBody String xml

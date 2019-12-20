@@ -8,6 +8,9 @@ import org.springframework.data.repository.query.Param;
 import java.sql.Timestamp;
 import java.util.List;
 
+/**
+ * Repository for Purchase
+ */
 public interface PurchaseRepo extends JpaRepository<Purchase,Long> {
     @Query("SELECT p FROM Purchase p WHERE p.purchaseDate BETWEEN :from AND :to")
     List<Purchase> purchaseListBetweenDates(@Param("from") Timestamp f, @Param("to") Timestamp t);
