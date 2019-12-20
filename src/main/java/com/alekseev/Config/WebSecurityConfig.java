@@ -16,16 +16,12 @@ import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 @EnableGlobalMethodSecurity(prePostEnabled = true)
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
-
-
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.csrf().disable();
-
         http
                 .authorizeRequests()
-
-                .antMatchers("/","/static/**","/save/**").permitAll()
+                .antMatchers("/", "/static/**", "/save/**").permitAll()
                 .anyRequest().authenticated()
                 .and()
                 .formLogin()
@@ -37,17 +33,16 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .logout()
                 .permitAll();
     }
+
     @Bean
     @Override
     public UserDetailsService userDetailsService() {
-        UserDetails user=
+        UserDetails user =
                 User.withDefaultPasswordEncoder()
-                .username("admin")
-                .password("admin")
-                .roles("ADMIN")
-                .build();
+                        .username("admin")
+                        .password("admin")
+                        .roles("ADMIN")
+                        .build();
         return new InMemoryUserDetailsManager(user);
-
-
     }
 }

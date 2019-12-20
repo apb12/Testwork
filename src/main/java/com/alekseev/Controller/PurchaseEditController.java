@@ -8,6 +8,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import java.math.BigDecimal;
+
 @Controller
 @RequestMapping("/crud")
 public class PurchaseEditController {
@@ -23,13 +25,26 @@ public class PurchaseEditController {
         return "purchaseedit";
     }
     @PostMapping("/delete")
-    public String deletePurch(@PathVariable("id")Purchase p){
+    public String deletePurch(@RequestParam("id")Purchase p){
         purchaseDaoServiсe.delete(p);
-        return "redirect:/show";
+        return "redirect:/greeting";
     }
     @PostMapping("/save")
-    public  @ResponseBody String savePurch(Purchase p){
+    public  String savePurch(@RequestParam ("id")Long id,
+                             @RequestParam("item")String item,
+                             @RequestParam("name")String name,
+                             @RequestParam("lastName")String lastName,
+                             @RequestParam("age")String age,
+                             @RequestParam("count")String count,
+                             @RequestParam("amount")String amount){
+        Purchase p=purchaseDaoServiсe.findById(id);
+        p.setPurchaseItem(itemDaoService.findByName(item));
+        p.setName(name);
+        p.setLastName(lastName);
+        p.setAge(Integer.valueOf(age));
+        p.setCount(Integer.valueOf(count));
+        p.setAmount(new BigDecimal(Integer.valueOf(amount)));
         purchaseDaoServiсe.save(p);
-        return "redirect:/show";
+        return "redirect:/greeting";
     }
 }

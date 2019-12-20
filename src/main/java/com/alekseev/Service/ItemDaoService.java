@@ -9,4 +9,5 @@ import java.util.List;
 public interface ItemDaoService {
     List<Item>findAll();
     Item findById(Long id);
+    Item findByName(String name);
 }

@@ -10,8 +10,6 @@ import java.io.IOException;
 public class XmlToObjectService {
     public static Purchase convert(String xml) throws IOException {
         XmlMapper xmlMapper=new XmlMapper();
-        Purchase purchase=xmlMapper.readValue(xml,Purchase.class);
-        return purchase;
-
+        return xmlMapper.readValue(xml,Purchase.class);
     }
 }

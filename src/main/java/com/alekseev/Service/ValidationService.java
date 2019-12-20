@@ -25,6 +25,5 @@ public class ValidationService {
         } catch (Exception ex) {
             return false;
         }
-
     }
 }

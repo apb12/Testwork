@@ -15,7 +15,6 @@ public class Item {
     @OneToMany(mappedBy = "purchaseItem")
     private List<Purchase>purchaseList;
     public Item(){}
-
     public Item(Long id) {
         this.id = id;
     }

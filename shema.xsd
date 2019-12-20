@@ -1,0 +1,22 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="Purchase" >
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element type="xs:positiveInteger" name="count"  />
+                <xs:element type="xs:string" name="name"/>
+                <xs:element type="xs:string" name="lastName"/>
+                <xs:element type="xs:positiveInteger" name="age"/>
+                <xs:element type="xs:decimal" name="amount"/>
+                <xs:element type="xs:string" name="purchaseDate"/>
+                <xs:element name="purchaseItem">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element type="xs:positiveInteger"  name="id"/>
+                            <xs:element type="xs:string" name="name"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

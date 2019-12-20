@@ -20,4 +20,10 @@ public class ItemDaoServiceImpl implements ItemDaoService {
         return itemRepo.getOne(id);
     }
 
+    @Override
+    public Item findByName(String name) {
+        return itemRepo.findByName(name);
+    }
+
+
 }

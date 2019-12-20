@@ -24,7 +24,7 @@ public class PurchaseController {
     @PostMapping("/save")
     public boolean savePurchase(
             @RequestBody String xml
-            ) throws IOException {
+    ) throws IOException {
 
         if (!ValidationService.validXml(xml, "shema.xsd")) {
             throw new PurchaseValidationExeption();
@@ -35,21 +35,18 @@ public class PurchaseController {
     }
 
     /**
-     *
      * Метод ,генерирующий xml для тестов,будет удален в продакшене
      */
     @RequestMapping("/purchase")
-    public Purchase getPurhase(){
-        Purchase p=new Purchase();
+    public Purchase getPurhase() {
+        Purchase p = new Purchase();
         p.setCount(10);
         p.setName("stas");
-        p.setLastName("alekseev");
+        p.setLastName("fidulin");
         p.setAge(40);
         p.setAmount(new BigDecimal(3));
         p.setPurchaseDate(new Timestamp(System.currentTimeMillis()));
         p.setPurchaseItem(new Item(2L));
         return p;
-
-
     }
 }
